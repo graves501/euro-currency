@@ -56,13 +56,16 @@ fn convert_into_euro(mut number_to_convert: f64) -> String {
 
     while number_to_convert > 0.0 {
         if number_to_convert >= FIVE_HUNDRED {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, FIVE_HUNDRED);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, FIVE_HUNDRED);
             banknote_500_counter += 1;
         } else if number_to_convert >= TWO_HUNDRED {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, TWO_HUNDRED);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, TWO_HUNDRED);
             banknote_200_counter += 1;
         } else if number_to_convert >= ONE_HUNDRED {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, ONE_HUNDRED);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, ONE_HUNDRED);
             banknote_100_counter += 1;
         } else if number_to_convert >= FIFTY {
             number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, FIFTY);
@@ -83,22 +86,28 @@ fn convert_into_euro(mut number_to_convert: f64) -> String {
             number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, ONE);
             coin_1_counter += 1;
         } else if number_to_convert >= FIFTY_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, FIFTY_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, FIFTY_CENT);
             coin_50_cent_counter += 1;
         } else if number_to_convert >= TWENTY_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, TWENTY_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, TWENTY_CENT);
             coin_20_cent_counter += 1;
         } else if number_to_convert >= TEN_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, TEN_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, TEN_CENT);
             coin_10_cent_counter += 1;
         } else if number_to_convert >= FIVE_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, FIVE_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, FIVE_CENT);
             coin_5_cent_counter += 1;
         } else if number_to_convert >= TWO_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, TWO_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, TWO_CENT);
             coin_2_cent_counter += 1;
         } else if number_to_convert >= ONE_CENT {
-            number_to_convert = subtract_and_round_to_two_decimal_places(number_to_convert, ONE_CENT);
+            number_to_convert =
+                subtract_and_round_to_two_decimal_places(number_to_convert, ONE_CENT);
             coin_1_cent_counter += 1;
         }
     }
@@ -166,7 +175,10 @@ fn convert_into_euro(mut number_to_convert: f64) -> String {
     conversion_result
 }
 
-fn subtract_and_round_to_two_decimal_places(mut number_to_subtract: f64, subtraction_value: f64) -> f64 {
+fn subtract_and_round_to_two_decimal_places(
+    mut number_to_subtract: f64,
+    subtraction_value: f64,
+) -> f64 {
     number_to_subtract -= subtraction_value;
     round_to_two_decimal_places(number_to_subtract)
 }
